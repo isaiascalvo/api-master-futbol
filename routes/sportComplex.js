@@ -92,7 +92,7 @@ router.post('/logSC', (req, res, next) => {
     console.log(req.body);
     SportComplex.findOne({username:req.body.username, password: req.body.password})
         .then(sportComplex => {
-            if (!sportComplex) { return res.sendStatus(401); }
+            //if (!sportComplex) { return res.sendStatus(401); }
             return res.json({ 'sportComplex': sportComplex })
         })
 });

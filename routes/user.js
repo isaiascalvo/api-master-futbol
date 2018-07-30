@@ -82,7 +82,7 @@ router.post('/log', (req, res, next) => {
     console.log(req.body);
     User.findOne({username:req.body.username, password: req.body.password})
         .then(user => {
-            if (!user) { return res.sendStatus(401); }
+            //if (!user) { user }
             return res.json({ 'user': user })
         })
 });
